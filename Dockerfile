@@ -5,7 +5,7 @@ FROM openjdk:11
 WORKDIR /javaapp
 
 # Copy only the necessary source files
-COPY HelloWorld.java .
+COPY HelloWorldApp.java .
 
 # Compile the Java program
 RUN javac HelloWorldApp.java
