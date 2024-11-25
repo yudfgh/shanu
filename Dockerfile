@@ -8,7 +8,7 @@ WORKDIR /javaapp
 COPY HelloWorld.java .
 
 # Compile the Java program
-RUN javac HelloWorld.java
+RUN javac HelloWorldApp.java
 
 # Set the default command to run the Java program
 CMD ["java", "HelloWorld"]
