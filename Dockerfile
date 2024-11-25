@@ -1,15 +1,15 @@
-# Use the official OpenJDK image from Docker Hub
-FROM openjdk:17-jdk-slim
+# Use a specific version of OpenJDK
+FROM openjdk:11
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /javaapp
 
-# Copy the jar file into the container
-COPY target/helloworld-app.jar app.jar
+# Copy only the necessary source files
+COPY HelloWorld.java .
 
-# Expose port 8080 for Spring Boot app
-EXPOSE 8080
+# Compile the Java program
+RUN javac HelloWorld.java
 
-# Command to run the application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Set the default command to run the Java program
+CMD ["java", "HelloWorld"]
 
