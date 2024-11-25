@@ -5,11 +5,11 @@ FROM openjdk:11
 WORKDIR /javaapp
 
 # Copy only the necessary source files
-COPY HelloWorldApp.java .
+COPY HelloWorld.java .
 
 # Compile the Java program
-RUN javac HelloWorldApp.java
+RUN javac HelloWorld.java
 
 # Set the default command to run the Java program
-CMD ["java", "HelloWorldApp"]
+CMD ["java", "HelloWorld"]
 
