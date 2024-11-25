@@ -11,5 +11,5 @@ COPY HelloWorldApp.java .
 RUN javac HelloWorldApp.java
 
 # Set the default command to run the Java program
-CMD ["java", "HelloWorld"]
+CMD ["java", "HelloWorldApp"]
 
